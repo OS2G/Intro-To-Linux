@@ -1,5 +1,5 @@
 # Welcome to the 80s
-An introduction to Linux and making it work on the world's worst operating system (Windows).
+An introduction to Linux and making it work on ~~the world's worst operating system,~~ Windows.
 
 ## What is Linux?
 ### An operating system
