@@ -1,4 +1,4 @@
-# Welcome to the 80s
+# Welcome to the 90s
 An introduction to Linux and making it work on ~~the world's worst operating system,~~ Windows.
 
 ## What is Linux?
