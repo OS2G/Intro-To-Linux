@@ -21,19 +21,19 @@ This sounds... interesting? Can you show me how to use it?
 
 There are many ways to use it, but we will be focusing on Windows and WSL.
 
-### Install it
+#### Install it
 Similar to Windows (and macOS), it can be installed on hardware. You grab the OS and set up a flash drive with its installer and you're good to go.
 
-### Virtualization
+#### Virtualization
 You can run Linux virtually. This can be done by downloading something like VirtualBox and then also downloading the OS itself.
 
-### macOS
+#### macOS
 macOS is based on NeXTSTEP which was stemmed from UNIX, the operating system Linux took its inspiration from. As such, many of the commands that exist in Linux are also standard in macOS Terminal thanks to Berkley's Software Distribution (BSD).
 
-### Linux
+#### Linux
 Why are you even asking?
 
-### Windows
+#### Windows
 - Bash emulators such as MinGW and Cygwin allow you to run natively compiled Linux programs under Windows, but doesn't allow you to have a real Linux experience, nor run programs compiled for Linux.
 - Windows Subsystem for Linux is an integration Microsoft made allowing for Linux calls to translate to Windows calls so you have fast performance while running native Linux programs.
 - As mentioned earlier, you can virtualize it using something like VirtualBox.
@@ -70,7 +70,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 Knock knock Neo. Follow the white rabbit.
 
-## Where's my GUI?!
+### Where's my GUI?!
 Linux, like every operating system, has a command line based shell it operates on. It's the basis of how everything works.
 
 Both macOS and Windows abstract that command line shell and instead have startup scripts that simply run the services and programs necessary to give you mouse support and graphical windows you can touch with your fingers and move around.
@@ -79,7 +79,7 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 
 ## Alright, so how does this work?
 
-### Tutorial
+### Command Line Tutorial
 1. Determine where in the file system the shell opens to
 	- `pwd`
 	- `echo $HOME` (shows the bash alias for the home directory)
