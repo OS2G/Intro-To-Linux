@@ -173,4 +173,6 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 	- Permanent (folder must have no files in it otherwise)
 10. `man command`: Manual for command
 
-[Learn the way of the Linux-Fu (linuxjourney)](https://linuxjourney.com/)
+
+### Further Resources
+* [Learn the way of the Linux-Fu (linuxjourney)](https://linuxjourney.com/)
