@@ -1,3 +1,4 @@
+
 # Welcome to the 90s
 An introduction to Linux and making it work on ~~the world's worst operating system,~~ Windows.
 
@@ -79,7 +80,7 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 ## Alright, so how does this work?
 
 ### Tutorial
-1. Determine where in the file system the shell opens to (home directory, explain what it is during the presentation)
+1. Determine where in the file system the shell opens to
 	- `pwd`
 	- `echo $HOME` (shows the bash alias for the home directory)
 	- `echo ~` (shows this is another usable symbol)
@@ -125,15 +126,27 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 	- `cat test` (prints the contents of the file)
 	- `more test` (reads the contents of the file)
 10. Modify file permissions
-	- `chmod 644 test` (sets the file to be read only except for root explaining how file permissions work comes afterwards)
+	- `chmod 444 test` (sets the file to be read only)
 	- `vi test` (Try to edit the text file)
 		- `:wq` (Make some changes and try to save them)
 		- Will tell you it’s denied!
-	- `chmod 664 test` (try to fix permissions, will also fail)
-	- `sudo chmod 666` (have to be super user to change the permissions again)
-11. Install a different text editor
+	- `chmod 644 test` (sets the file to be writable by user)
+	- `vi test` (Try to edit the text file)
+		- `:wq` (Make some changes and try to save them)
+		- This time it will work!
+11. Modify file ownership
+	- `chown root:root test` (try to change ownership, will fail)
+	- `sudo chown root:root test` (have to be root to change the ownership to a user that's not you)
+	- `ls -l` to see owners and permissions
+	- `sudo chown $USER:$USER test` (take ownership again
+12. Install a different text editor
 	- `sudo apt update` (updates the package database)
 	- `sudo apt install nano` (installs the package "nano")
+	- `nano` (opens the nano editor)
+13. Install other applications
+	- `sudo apt install hollywood`
+	- `hollywood`
+	- spam `^c` to quit all windows (ctrl + c)
  
 ### Cheat Sheet
 1. `pwd`: Will return the current directory
