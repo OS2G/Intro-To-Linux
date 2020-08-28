@@ -64,6 +64,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 1. Search for "wsl" in windows search and open it
 2. It will start setting itself up, it will take awhile
 3. Set your preferred username and password.
+
 *A quirk of Linux/UNIX CLI is that passwords don't show up as asterisks, the keyboard cursor just doesn't move. Hit enter after you have typed in your password.*
 
 Knock knock Neo. Follow the white rabbit.
@@ -76,3 +77,87 @@ Both macOS and Windows abstract that command line shell and instead have startup
 Many distributions of Linux do the same. For instance, modern version of Ubuntu run a modified version of Gnome Desktop. Even with all of the graphical tools at hand, sometimes you need to get nitty gritty and use some commands to reach your goal. This is especially true if you're doing programming.
 
 ## Alright, so how does this work?
+
+### Tutorial
+1. Determine where in the file system the shell opens to (home directory, explain what it is during the presentation)
+	- `pwd`
+	- `echo $HOME` (shows the bash alias for the home directory)
+	- `echo ~` (shows this is another usable symbol)
+2. View what all is in the current folder
+	- `ls` (shows everything currently there)
+	- `ls -a` (show hidden files)
+3. What are `.` and `..`? (current directory and parent directory)
+	- `ls -a .` (does the same thing as ls -a but shows syntax order: command [flags] inputs)
+	- `ls -a ..` (shows the parent directory’s content, which will include the current folder)
+4. How do we move around inside the file system?
+	- `cd` (change directory) (automatically moves you to the user’s home directory)
+	- `cd ..` (goes up to the parent directory)
+	- `cd .` (then does nothing - you’re telling the computer to change directories to the current directory)
+	- `cd ~` (will go back to the home directory)
+	- `pwd` to confirm they’re back in the home directory
+5. Creating stuff!
+	- `mkdir testfolder` (creates a new directory called testfolder)
+	- `touch example` (creates an empty file called example)
+	- Use `ls` to show the new folder and file
+6. Manipulating files
+	- `mv ./example ./example.txt` (turns the original file into a text file)
+	- `cp ./example.txt ./testfolder/newtest.txt`
+	- `ls` (shows the change in the example file)
+	- `ls testfolder/` (shows the change in the internal file name)
+7. Clean it up
+	- `rm example.txt` (gets rid of the original file)
+	- `rm -r ./testfolder/` (gets rid of the file and the folder)
+		- BE VERY CAREFUL! This is recursive, so if you input the wrong sequence, you will not be able to recover what you delete.
+8. Use `vi` to create a text file
+	- `vi` (opens the editor)
+		- `:q` (quits the editor)
+	- `ls` (no new file!)
+	- `vi test` (will show file name at the top of the editor)
+		- Type up gibberish (for the sake of example)
+		- `:!q` (will not save the file and then quits)
+	- `vi test` 
+		- `“i”/”esc”` (changes modes in the editor - worth touching on/explaining)
+		- `“The quick brown fox jumped over the lazy dog”` (This can be other stuff)
+		- `:w` (saves the text)
+		- `:q` (quits the editor)
+	- Move around with `k,j,h,l`
+9. View the contents of a file
+	- `cat test` (prints the contents of the file)
+	- `more test` (reads the contents of the file)
+10. Modify file permissions
+	- `chmod 644 test` (sets the file to be read only except for root explaining how file permissions work comes afterwards)
+	- `vi test` (Try to edit the text file)
+		- `:wq` (Make some changes and try to save them)
+		- Will tell you it’s denied!
+	- `chmod 664 test` (try to fix permissions, will also fail)
+	- `sudo chmod 666` (have to be super user to change the permissions again)
+11. Install a different text editor
+	- `sudo apt update` (updates the package database)
+	- `sudo apt install nano` (installs the package "nano")
+ 
+### Cheat Sheet
+1. `pwd`: Will return the current directory
+2. `ls`: List everything in current directory
+	- -a shows hidden files
+	- -l list format
+3. `cd`: Change directory
+	- `cd .`  = Change into current directory
+	- `cd ..` = Change into the previous directory
+	- `cd ../..`= Move 2 directories up
+4. `mkdir dirName`: Make directory/ Create folder
+5. `touch fileName`: Create/Update a file called “fileName”
+	- No type automatically assigned
+6. `touch fileName.txt`: Create a text file called “fileName”
+	- Editors
+		- `vi`
+		- `vim`
+		- `nano`
+		- `emacs`
+7. `cp file location`: Copy file into location
+8. `rm file`: remove file
+	- PERMANENT
+9. `rmdir`: Remove Folder
+	- Permanent (folder must have no files in it otherwise)
+10. `man command`: Manual for command
+
+[Learn the way of the Linux-Fu (linuxjourney)](https://linuxjourney.com/)
