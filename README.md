@@ -176,3 +176,4 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 
 ### Further Resources
 * [Learn the way of the Linux-Fu (linuxjourney)](https://linuxjourney.com/)
+* [Some great mini-blurbs on various different commands](https://flaviocopes.com/tags/cli/)
