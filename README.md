@@ -175,5 +175,8 @@ Many distributions of Linux do the same. For instance, modern version of Ubuntu 
 
 
 ### Further Resources
+* [Most of what's covered in CSCE 251](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 * [Learn the way of the Linux-Fu (linuxjourney)](https://linuxjourney.com/)
 * [Some great mini-blurbs on various different commands](https://flaviocopes.com/tags/cli/)
+* [Another overview featuring Pathing, Expansion, Jobs](http://www.linuxcommand.org/lc3_learning_the_shell.php)
+* [S.R. Bourne explains his shell](https://web.archive.org/web/20170809151419/http://people.fas.harvard.edu/~lib113/reference/unix/bourne_shell.pdf)
